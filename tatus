@@ -1,0 +1,193 @@
+[33mcommit 4f76ec464c67d295ca65c27ce30df4e98d20c3bc[m
+Author: Gabriel Melo <gabrielmeloarteaga@gmail.com>
+Date:   Tue Apr 21 00:12:36 2015 -0500
+
+    eliminados comentarios
+
+ application/controllers/welcome.php | 16 [32m+[m[31m---------------[m
+ 1 file changed, 1 insertion(+), 15 deletions(-)
+
+[33mcommit ae9166c5b1bb246c394d9c78f82059aaca575d99[m
+Merge: 8eee342 148580e
+Author: Gabriel Melo <gabrielmeloarteaga@gmail.com>
+Date:   Mon Apr 20 23:48:30 2015 -0500
+
+    Merge branch 'master' of github.com:gabrielmeloarteaga/combo
+
+[33mcommit 8eee342cea46eb39921c8920a18216171eac051b[m
+Author: Gabriel Melo <gabrielmeloarteaga@gmail.com>
+Date:   Mon Apr 20 23:43:28 2015 -0500
+
+    first commit
+
+ application/.htaccess                              |    1 [32m+[m
+ application/cache/.htaccess                        |    1 [32m+[m
+ application/cache/index.html                       |   10 [32m+[m
+ application/config/autoload.php                    |  116 [32m++[m
+ application/config/config.php                      |  362 [32m++++[m
+ application/config/constants.php                   |   41 [32m+[m
+ application/config/database.php                    |   69 [32m+[m
+ application/config/doctypes.php                    |   15 [32m+[m
+ application/config/foreign_chars.php               |   64 [32m+[m
+ application/config/hooks.php                       |   16 [32m+[m
+ application/config/index.html                      |   10 [32m+[m
+ application/config/migration.php                   |   41 [32m+[m
+ application/config/mimes.php                       |  106 [32m+[m
+ application/config/profiler.php                    |   17 [32m+[m
+ application/config/routes.php                      |   46 [32m+[m
+ application/config/smileys.php                     |   66 [32m+[m
+ application/config/user_agents.php                 |  178 [32m++[m
+ application/controllers/index.html                 |   10 [32m+[m
+ application/controllers/welcome.php                |   27 [32m+[m
+ application/core/index.html                        |   10 [32m+[m
+ application/errors/error_404.php                   |   62 [32m+[m
+ application/errors/error_db.php                    |   62 [32m+[m
+ application/errors/error_general.php               |   62 [32m+[m
+ application/errors/error_php.php                   |   10 [32m+[m
+ application/errors/index.html                      |   10 [32m+[m
+ application/helpers/index.html                     |   10 [32m+[m
+ application/hooks/index.html                       |   10 [32m+[m
+ application/index.html                             |   10 [32m+[m
+ application/language/english/index.html            |   10 [32m+[m
+ application/language/index.html                    |   10 [32m+[m
+ application/libraries/index.html                   |   10 [32m+[m
+ application/logs/index.html                        |   10 [32m+[m
+ application/models/index.html                      |   10 [32m+[m
+ application/third_party/index.html                 |   10 [32m+[m
+ application/views/index.html                       |   10 [32m+[m
+ application/views/welcome_message.php              |   88 [32m+[m
+ index.php                                          |  205 [32m++[m
+ license.txt                                        |   51 [32m+[m
+ system/.htaccess                                   |    1 [32m+[m
+ system/core/Benchmark.php                          |  118 [32m++[m
+ system/core/CodeIgniter.php                        |  402 [32m++++[m
+ system/core/Common.php                             |  564 [32m++++++[m
+ system/core/Config.php                             |  379 [32m++++[m
+ system/core/Controller.php                         |   64 [32m+[m
+ system/core/Exceptions.php                         |  193 [32m++[m
+ system/core/Hooks.php                              |  248 [32m+++[m
+ system/core/Input.php                              |  849 [32m++++++++[m
+ system/core/Lang.php                               |  160 [32m++[m
+ system/core/Loader.php                             | 1248 [32m++++++++++++[m
+ system/core/Model.php                              |   57 [32m+[m
+ system/core/Output.php                             |  574 [32m++++++[m
+ system/core/Router.php                             |  522 [32m+++++[m
+ system/core/Security.php                           |  875 [32m++++++++[m
+ system/core/URI.php                                |  654 [32m++++++[m
+ system/core/Utf8.php                               |  165 [32m++[m
+ system/core/index.html                             |   10 [32m+[m
+ system/database/DB.php                             |  162 [32m++[m
+ system/database/DB_active_rec.php                  | 2045 [32m+++++++++++++++++++[m
+ system/database/DB_cache.php                       |  195 [32m++[m
+ system/database/DB_driver.php                      | 1410 [32m+++++++++++++[m
+ system/database/DB_forge.php                       |  382 [32m++++[m
+ system/database/DB_result.php                      |  410 [32m++++[m
+ system/database/DB_utility.php                     |  414 [32m++++[m
+ system/database/drivers/cubrid/cubrid_driver.php   |  792 [32m++++++++[m
+ system/database/drivers/cubrid/cubrid_forge.php    |  288 [32m+++[m
+ system/database/drivers/cubrid/cubrid_result.php   |  202 [32m++[m
+ system/database/drivers/cubrid/cubrid_utility.php  |  108 [32m+[m
+ system/database/drivers/cubrid/index.html          |   10 [32m+[m
+ system/database/drivers/index.html                 |   10 [32m+[m
+ system/database/drivers/mssql/index.html           |   10 [32m+[m
+ system/database/drivers/mssql/mssql_driver.php     |  667 [32m+++++++[m
+ system/database/drivers/mssql/mssql_forge.php      |  248 [32m+++[m
+ system/database/drivers/mssql/mssql_result.php     |  169 [32m++[m
+ system/database/drivers/mssql/mssql_utility.php    |   88 [32m+[m
+ system/database/drivers/mysql/index.html           |   10 [32m+[m
+ system/database/drivers/mysql/mysql_driver.php     |  779 [32m++++++++[m
+ system/database/drivers/mysql/mysql_forge.php      |  273 [32m+++[m
+ system/database/drivers/mysql/mysql_result.php     |  174 [32m++[m
+ system/database/drivers/mysql/mysql_utility.php    |  210 [32m++[m
+ system/database/drivers/mysqli/index.html          |   10 [32m+[m
+ system/database/drivers/mysqli/mysqli_driver.php   |  776 [32m++++++++[m
+ system/database/drivers/mysqli/mysqli_forge.php    |  258 [32m+++[m
+ system/database/drivers/mysqli/mysqli_result.php   |  174 [32m++[m
+ system/database/drivers/mysqli/mysqli_utility.php  |   87 [32m+[m
+ system/database/drivers/oci8/index.html            |   10 [32m+[m
+ system/database/drivers/oci8/oci8_driver.php       |  808 [32m++++++++[m
+ system/database/drivers/oci8/oci8_forge.php        |  248 [32m+++[m
+ system/database/drivers/oci8/oci8_result.php       |  217 [32m++[m
+ system/database/drivers/oci8/oci8_utility.php      |   87 [32m+[m
+ system/database/drivers/odbc/index.html            |   10 [32m+[m
+ system/database/drivers/odbc/odbc_driver.php       |  637 [32m++++++[m
+ system/database/drivers/odbc/odbc_forge.php        |  266 [32m+++[m
+ system/database/drivers/odbc/odbc_result.php       |  228 [32m+++[m
+ system/database/drivers/odbc/odbc_utility.php      |  103 [32m+[m
+ system/database/drivers/pdo/index.html             |   10 [32m+[m
+ system/database/drivers/pdo/pdo_driver.php         |  811 [32m++++++++[m
+ system/database/drivers/pdo/pdo_forge.php          |  266 [32m+++[m
+ system/database/drivers/pdo/pdo_result.php         |  183 [32m++[m
+ system/database/drivers/pdo/pdo_utility.php        |  103 [32m+[m
+ system/database/drivers/postgre/index.html         |   10 [32m+[m
+ system/database/drivers/postgre/postgre_driver.php |  703 [32m+++++++[m
+ system/database/drivers/postgre/postgre_forge.php  |  299 [32m+++[m
+ system/database/drivers/postgre/postgre_result.php |  169 [32m++[m
+ .../database/drivers/postgre/postgre_utility.php   |   88 [32m+[m
+ system/database/drivers/sqlite/index.html          |   10 [32m+[m
+ system/database/drivers/sqlite/sqlite_driver.php   |  658 [32m++++++[m
+ system/database/drivers/sqlite/sqlite_forge.php    |  265 [32m+++[m
+ system/database/drivers/sqlite/sqlite_result.php   |  179 [32m++[m
+ system/database/drivers/sqlite/sqlite_utility.php  |   96 [32m+[m
+ system/database/drivers/sqlsrv/index.html          |   10 [32m+[m
+ system/database/drivers/sqlsrv/sqlsrv_driver.php   |  599 [32m++++++[m
+ system/database/drivers/sqlsrv/sqlsrv_forge.php    |  245 [32m+++[m
+ system/database/drivers/sqlsrv/sqlsrv_result.php   |  169 [32m++[m
+ system/database/drivers/sqlsrv/sqlsrv_utility.php  |   88 [32m+[m
+ system/database/index.html                         |   10 [32m+[m
+ system/fonts/index.html                            |   10 [32m+[m
+ system/fonts/texb.ttf                              |  Bin [31m0[m -> [32m143830[m bytes
+ system/helpers/array_helper.php                    |  119 [32m++[m
+ system/helpers/captcha_helper.php                  |  246 [32m+++[m
+ system/helpers/cookie_helper.php                   |  103 [32m+[m
+ system/helpers/date_helper.php                     |  611 [32m++++++[m
+ system/helpers/directory_helper.php                |   80 [32m+[m
+ system/helpers/download_helper.php                 |  107 [32m+[m
+ system/helpers/email_helper.php                    |   62 [32m+[m
+ system/helpers/file_helper.php                     |  479 [32m+++++[m
+ system/helpers/form_helper.php                     | 1054 [32m++++++++++[m
+ system/helpers/html_helper.php                     |  436 [32m++++[m
+ system/helpers/index.html                          |   10 [32m+[m
+ system/helpers/inflector_helper.php                |  203 [32m++[m
+ system/helpers/language_helper.php                 |   58 [32m+[m
+ system/helpers/number_helper.php                   |   76 [32m+[m
+ system/helpers/path_helper.php                     |   72 [32m+[m
+ system/helpers/security_helper.php                 |  128 [32m++[m
+ system/helpers/smiley_helper.php                   |  281 [32m+++[m
+ system/helpers/string_helper.php                   |  307 [32m+++[m
+ system/helpers/text_helper.php                     |  535 [32m+++++[m
+ system/helpers/typography_helper.php               |   93 [32m+[m
+ system/helpers/url_helper.php                      |  594 [32m++++++[m
+ system/helpers/xml_helper.php                      |   71 [32m+[m
+ system/index.html                                  |   10 [32m+[m
+ system/language/english/calendar_lang.php          |   51 [32m+[m
+ system/language/english/date_lang.php              |   61 [32m+[m
+ system/language/english/db_lang.php                |   29 [32m+[m
+ system/language/english/email_lang.php             |   24 [32m+[m
+ system/language/english/form_validation_lang.php   |   29 [32m+[m
+ system/language/english/ftp_lang.php               |   18 [32m+[m
+ system/language/english/imglib_lang.php            |   24 [32m+[m
+ system/language/english/index.html                 |   10 [32m+[m
+ system/language/english/migration_lang.php         |   13 [32m+[m
+ system/language/english/number_lang.php            |   10 [32m+[m
+ system/language/english/profiler_lang.php          |   25 [32m+[m
+ system/language/english/unit_test_lang.php         |   25 [32m+[m
+ system/language/english/upload_lang.php            |   22 [32m+[m
+ system/language/index.html                         |   10 [32m+[m
+ system/libraries/Cache/Cache.php                   |  214 [32m++[m
+ system/libraries/Cache/drivers/Cache_apc.php       |  147 [32m++[m
+ system/libraries/Cache/drivers/Cache_dummy.php     |  126 [32m++[m
+ system/libraries/Cache/drivers/Cache_file.php      |  193 [32m++[m
+ system/libraries/Cache/drivers/Cache_memcached.php |  214 [32m++[m
+ system/libraries/Cache/drivers/index.html          |   10 [32m+[m
+ system/libraries/Cache/index.html                  |   10 [32m+[m
+ system/libraries/Calendar.php                      |  475 [32m+++++[m
+ system/libraries/Cart.php                          |  551 [32m++++++[m
+ system/libraries/Driver.php                        |  227 [32m+++[m
+ system/libraries/Email.php                         | 2092 [32m++++++++++++++++++++[m
+ system/libraries/Encrypt.php                       |  500 [32m+++++[m
+ system/libraries/Form_validation.php               | 1382 [32m+++++++++++++[m
+ system/libraries/Ftp.php                           |  660 [32m++++++[m
+ system/libraries/Image_lib.php                     | 1537 [32m++++++++++++++[m
+ system/libraries/Javascript.php                    |  871 [32m++++++++[m
+ system/libraries/Log.php                           |  
