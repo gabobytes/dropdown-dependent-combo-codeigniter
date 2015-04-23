@@ -4,7 +4,12 @@ class Model_states extends CI_Model {
 
 	function getStates($country)
 	{
-		
+		$this->db->select("id,namestate");
+		$this->db->where("idcountry",$country);
+		$this->db->order_by("namestate","ASC");
+		$query = $this->db->get('states');
+
+		return $query->result();
 	}
 
 }

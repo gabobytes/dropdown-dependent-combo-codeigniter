@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+DirectoryIndex index.php
+RewriteEngine On
+RewriteBase /combo
+RewriteCond $1 !^(index\.php|robots|assets\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
