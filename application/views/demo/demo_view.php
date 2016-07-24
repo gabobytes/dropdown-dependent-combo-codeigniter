@@ -12,7 +12,7 @@
 
  		//load states with get method
  		$.get('<?php echo site_url();?>demo/getStates/'+idcountry)
-	 		.done(function(data){
+	 		.done(function(data) {
 	 			$("#state").html(data);
 	 		}).fail(function(){
 	 			alert('error loading data');
