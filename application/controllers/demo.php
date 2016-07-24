@@ -6,8 +6,9 @@
 class Demo extends CI_Controller {
 
 public function __construct()
-{
+{	
 	parent::__construct();
+	//load on the constructor all the models
 	$this->load->model('model_countries');
 	$this->load->model('model_states');
 	$this->load->model('model_cities');
@@ -15,19 +16,22 @@ public function __construct()
 
 	public function index()
 	{
-
+		//get countries
 		$data['countries'] = $this->model_countries->getCountries();
+		//load view with the data, for the combo countries
 		$this->load->view('demo/demo_view',$data);
 	}
 
 	public function getStates()
 	{
+		//get via URL the id from the country
 		$idcountry = $this->uri->segment(3);
 
+		//then, get the states from that country
 		$data['states'] = $this->model_states->getStates($idcountry);
 
 
-		//this is not a good practice, never print on a controller
+		//this is not a good practice, never print on a controller ;)
 		echo "<option></option>";
 
 		foreach($data['states'] as $s):
