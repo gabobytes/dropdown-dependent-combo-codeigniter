@@ -1,25 +1,34 @@
 <?php $this->load->view('masterpage/head'); ?>
  <script>
+ /*
+	script for dropdown dependent combo on codeigniter	
+ */
+
  $(document).ready(function($) {	
+
+ 	/*when dropdown country changes */
  	$("#country").change(function(event) {
  		var idcountry = this.value;
- 
+ 		
+ 		//showing the loading.gif
  		$("#divLoading").removeClass('hidden');
 
  		//clear state and city before load data
  		$("#state").empty();
  		$("#city").empty();
 
- 		//load states with get method
+ 		/*load states with get method */
  		$.get('<?php echo site_url();?>demo/getStates/'+idcountry)
-	 		.done(function(data) {
+	 		.done(function(data) {//if we get success
 	 			$("#state").html(data);
-	 		}).fail(function(){
+	 		}).fail(function(){// if fails
 	 			alert('error loading data');
 	 		}).always(function(){
-	 			//hide loading.gif
+	 			//hiding loading.gif
 	 			$("#divLoading").addClass('hidden');
  		});
+
+	//when dropdown state changes 		
  	$("#state").change(function(event) {
 		var idstate = this.value;
 
@@ -27,19 +36,19 @@
 
  		//load cities with get method
  		$.get('<?php echo site_url();?>demo/getCities/'+idstate)
-	 		.done(function(data){
+	 		.done(function(data){ //if we get success
 	 			$("#city").html(data);
-	 		}).fail(function(){
+	 		}).fail(function(){ //if fails 
 	 			alert('error loading data');
 	 		}).always(function(){
-	 			//hide loading.gif
+	 			//hiding loading.gif
 	 			$("#divLoading").addClass('hidden');
  		})
  	});
 
  	});
 
- });//document ready
+ });/* end of document ready*/
  </script>
 <div class="row">
 	<h1>Dropdown dependent - CI and Bootstrap</h1>	
