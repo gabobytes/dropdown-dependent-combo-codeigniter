@@ -53,9 +53,9 @@
 <div class="row">
 	<h1>Dropdown dependent - CI and Bootstrap</h1>	
 
-	<div class="row container hidden" id="divLoading">
+	<div class="row container loader hidden" id="divLoading">
 		<div class="col-md-3">
-			<img src="<?php echo site_url();?>assets/img/loading.gif" alt="">Loading...
+			<!-- <img src="<?php echo site_url();?>assets/img/loading.gif" alt="">Loading...-->
 		</div>
 	</div>
 	<div class="col-md-8">
